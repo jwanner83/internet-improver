@@ -8,66 +8,68 @@ export default {
     init(1)
   },
   30: () => {
-    init(2)
-  },
-  40: () => {
-    init(3)
-  },
-  50: () => {
-    init(3)
-  },
-  60: () => {
-    init(3)
-  },
-  70: () => {
-    init(4)
-  },
-  80: () => {
-    init(4)
-  },
-  90: () => {
     init(5)
   },
-  100: () => {
-    init(6)
-  },
-  110: () => {
-    init(7)
-  },
-  120: () => {
-    init(8)
-  },
-  130: () => {
+  40: () => {
     init(10)
   },
+  50: () => {
+    init(10)
+  },
+  60: () => {
+    init(10)
+  },
+  70: () => {
+    init(15)
+  },
+  80: () => {
+    init(20)
+  },
+  90: () => {
+    init(25)
+  },
+  100: () => {
+    init(30)
+  },
+  110: () => {
+    init(30)
+  },
+  120: () => {
+    init(35)
+  },
+  130: () => {
+    init(40)
+  },
   140: () => {
-    init(12)
+    init(50)
   },
   150: () => {
-    init(14)
+    init(60)
   },
   160: () => {
-    init(16)
+    init(70)
   },
   170: () => {
-    init(18)
+    init(80)
   },
   180: () => {
-    init(20)
+    init(90)
   },
   190: () => {
-    init(20)
+    init(100)
   },
   200: () => {
-    init(-1)
+    init(100)
   },
   default: () => {
-    init(-1)
+    init(100)
   }
 }
 
-function init (amount) {
-  shuffle(Array.from(document.querySelectorAll('img'))).slice(-1 * amount).forEach(replace)
+function init (percentage) {
+  let array = shuffle(Array.from(document.querySelectorAll('img')))
+  let amount = Math.ceil((array.length / 100 * percentage))
+  array.slice(-1 * amount).forEach(replace)
 }
 
 function replace (element) {
