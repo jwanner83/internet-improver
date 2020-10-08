@@ -11,6 +11,5 @@
   },
   "scripts": {
     "build": "webpack",
-    "build:watch": "webpack --watch"
   }
 }
