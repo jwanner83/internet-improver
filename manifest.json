@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "Internet Improver",
+  "version": "1.0",
+
+  "description": "Improve your surfing experience with multiple tweaks in all websites on your browser.",
+  "homepage_url": "https://internet.org/",
+
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["dist/mod.js"]
+    }
+  ],
+  "permissions": [
+    "storage"
+  ]
+}
